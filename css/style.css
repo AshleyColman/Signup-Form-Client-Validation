@@ -73,22 +73,26 @@ main {
   height: 100vh;
 }
 .overlay {
-  position: absolute;
   top: 0;
-  width: 100%;
-  height: 100%;
   background: var(--red);
   opacity: 0.7;
-  z-index: -1;
 }
+.background {
+  background: url(../images/bg-intro-mobile.png);
+}
+.overlay,
 .background {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: url(../images/bg-intro-mobile.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   z-index: -1;
 }
 .grid {
+  margin: auto;
+  max-width: 375px;
   display: grid;
   place-items: center;
   margin-bottom: 3rem;
@@ -166,7 +170,7 @@ main {
   padding: 0 1rem;
   font-size: 0.8rem;
   text-align: center;
-  color: black;
+  color: var(--grey-blue);
 }
 .red-text {
   color: var(--red);
