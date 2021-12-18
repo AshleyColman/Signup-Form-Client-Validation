@@ -138,7 +138,7 @@ main {
   background: white;
   border-radius: 10px;
   display: grid;
-  gap: 1.5rem;
+  gap: 0rem;
   padding: 2rem;
   box-shadow: 0 8px var(--shadow-grey);
 }
@@ -150,6 +150,7 @@ main {
   padding: 1rem;
   outline: 1px solid rgba(62, 60, 73, 0.239);
   border-radius: 5px;
+  margin-bottom: 1rem;
 }
 .form-button {
   background: var(--green);
@@ -162,6 +163,11 @@ main {
   font-weight: var(--font-weight-600);
   letter-spacing: 0.1rem;
   box-shadow: 0 4px hsl(154, 54%, 46%);
+  margin-bottom: 1rem;
+}
+.form-input-container {
+  position: relative;
+  width: 100%;
 }
 .form-button:hover {
   background: hsl(154, 54%, 60%);
@@ -174,5 +180,36 @@ main {
 }
 .red-text {
   color: var(--red);
+}
+/* #endregion */
+
+/* #region no error */
+.form-input-container .error-icon,
+.form-input-container .error-text {
+  display: none;
+}
+/* #endregion */
+/* #region error */
+.form-input-container.error .error-icon,
+.form-input-container.error .error-text {
+  display: block;
+}
+.error-icon {
+  position: absolute;
+  top: 13.5px;
+  right: -15px;
+}
+.error-outline {
+  outline: 1px solid var(--red);
+}
+.error-text {
+  color: var(--red);
+  margin-bottom: 1rem;
+}
+.display-none {
+  display: none;
+}
+.display-block {
+  display: block;
 }
 /* #endregion */
